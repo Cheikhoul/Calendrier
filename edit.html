@@ -1,0 +1,81 @@
+<!DOCTYPE>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calendar App - Modifier un événément</title>
+    <link rel="stylesheet" href="./css/calendrier.css">
+    <script src="./js/renderer.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="editEvent">
+        <h1>Modifier un événement</h1>
+
+        <hr/>
+
+        <div class="rowEdit">
+            <span>Titre</span>
+            <input type="text" id="editTitre">
+        </div>
+
+        <div class="rowEdit">
+            <span>Date de début</span>
+            <input type="date" id="editStartdate">
+        </div>
+
+        <div class="rowEdit">
+            <span>Date de fin</span>
+            <input type="date" id="editEnddate">
+        </div>
+
+        <div class="rowEdit">
+            <span>
+                Localisation
+            </span>
+            <input type="text" id="editLieu">
+        </div>
+
+        <div class="rowEdit">
+            <span>
+                Catégorie
+            </span>
+            <input type="text" id="editCategorie">
+        </div>
+        
+        <div class="rowEdit">
+            <span>
+                Statut
+            </span>
+            <input type="text" id="editStatut">
+        </div>
+
+        <div class="rowEdit">
+            <span>
+                Description
+            </span>
+            <input type="text" id="editDescription">
+        </div>
+
+        <div class="rowEdit">
+            <span>
+                Transparence
+            </span>
+            <input type="text" id="editTransparence">
+        </div>
+
+        <div class="buttonsAdd">
+            <button id="editValider">Appliquer mes modifications</button>
+            <button id="editAnnuler">Annuler</button>
+        </div>
+
+    </div>
+
+    <script src="./js/update.js"></script>
+</body>
+</html>

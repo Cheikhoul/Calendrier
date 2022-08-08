@@ -1,0 +1,80 @@
+<!DOCTYPE>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calendar App - Ajouter un événément</title>
+    <link rel="stylesheet" href="./css/calendrier.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="addEvent">
+        <h1>Ajouter un événement</h1>
+
+
+            <div class="rowAdd">
+                <span>Titre</span>
+                <input type="text" id="addTitre">
+            </div>
+    
+            <div class="rowAdd">
+                <span>Date de début</span>
+                <input type="date" id="startdate">
+            </div>
+    
+            <div class="rowAdd">
+                <span>Date de fin</span>
+                <input type="date" id="enddate">
+            </div>
+    
+            <div class="rowAdd">
+                <span>
+                    Localisation
+                </span>
+                <input type="text" id="addLieu">
+            </div>
+    
+            <div class="rowAdd">
+                <span>
+                    Catégorie
+                </span>
+                <input type="text" id="addCategorie">
+            </div>
+            
+            <div class="rowAdd">
+                <span>
+                    Statut
+                </span>
+                <input type="text" id="addStatut">
+            </div>
+    
+            <div class="rowAdd">
+                <span>
+                    Description
+                </span>
+                <input type="text" id="addDescription">
+            </div>
+    
+            <div class="rowAdd">
+                <span>
+                    Transparence
+                </span>
+                <input type="text" id="addTransparence">
+            </div>
+    
+            <div class="buttonsAdd">
+                <button id="valider">Valider</button>
+                <button id="annuler">Annuler</button>
+            </div>
+    
+        </div>
+    
+    
+    <script src="./js/add.js"></script>
+</body>
+</html>

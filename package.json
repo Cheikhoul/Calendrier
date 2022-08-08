@@ -10,7 +10,7 @@
   "author": "Cloe Gaspar Cordeiro",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^20.0.0"
+    "electron": "^20.0.1"
   },
   "dependencies": {
     "mysql2": "^2.3.3"

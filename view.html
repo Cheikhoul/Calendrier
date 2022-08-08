@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calendar App - Voir un événément</title>
+    <link rel="stylesheet" href="./css/calendrier.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"> 
+</head>
+<body data-theme="light">
+    <div class="entete1">
+        <span id="eventTitre"></span>
+        
+        <div id="eventDate">Du : 
+            <div id="eventDateDeb"></div> Au : 
+            <div id="eventDateFin"><strong>Date de fin</strong></div>
+        </div>
+    </div>
+ 
+    <div id="eventLocation"><strong>Lieu de l'événement</strong></div>
+    <div id="eventDescription"><strong>Description</strong></div>
+    <div id="eventCategorie"><strong>Catégorie</strong></div>
+    <div id="eventStatut"><strong>Statut</strong></div>
+    <div id="eventTransparence"><strong>Transparence</strong></div>
+    
+    <div id="buttons">
+        <button id="viewModifier">Modifier l'événement</button>
+        <button id="viewSupprimer">Supprimer l'évenement</button>
+    </div>
+    <script src="./js/read.js"></script>
+</body>
+</html>

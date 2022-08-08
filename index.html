@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Calendar App</title>
+    <title>My Calendar</title>
     <link rel="stylesheet" href="./css/calendrier.css">
     <script src="./js/renderer.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,18 +14,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"> 
 </head>
 
-<body data-theme="light">
-    <div id="appYear"></div>
-    <div id="appMonth"></div>
-    <div class="change">
-        <button class="precedent" id="back">Précedent</button>
-        <div class="lightdark" >
-            <ul>
-                <li data-mode="light">☼</li>
-                <li data-mode="dark">☽</li>
-            </ul>
+<body>
+    <div class="entete">
+        <div id="appMonth"></div>
+        <div id="appYear"></div>
+        <div class="btnApp"> 
+            <div class="navigate">
+                <button class="previousMonth" id="previousMonth">Mois précedent</button>
+                <button class="nextMonth" id="nextMonth">Mois suivant</button>
+            </div>
+            <button id="eventAdd">Ajouter un événement</button>
         </div>
-        <button class="suivant" id="next">Suivant</button>
+        
     </div>
     <div class="weekDays">
         <div>Lun</div>

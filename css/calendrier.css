@@ -4,46 +4,36 @@ body {
     color : var(--textColor);
 }
 
-[data-theme="light"] {
-    --fond : rgb(225, 225, 225);
-    --colorA: rgb(102, 58, 102);
-    --colorB: rgb(207, 181, 207);
-
-    --colorC: rgb(98, 53, 98);
-    --colorD:var(--colorB);
-
-    --textColor : black;
+#app {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 200px;
 }
 
-[data-theme="dark"] {
-    --fond : rgb(64, 61, 67);
-    --colorA : rgb(207, 181, 207);
-    --colorB : rgb(102, 58, 102);
-
-    --colorC: var(--colorA);
-    --colorD: rgb(98, 53, 98);
-
-    --textColor: white;
+#app>* {
+    border: 1px solid black;
 }
 
 #app, .weekDays {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 200px;
 }
-#app {   
-    grid-auto-rows: 95px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.7rem;
+@media (min-width: 800px) {
+    #app {   
+        grid-auto-rows: 95px;   
+    }
+    #app, .weekDays, .entete, .entete1{
+        width: 75%;
+        margin: auto;
+    }
 }
 
+#app {font-family: 'Courier New', Courier, monospace;
+    font-size: 0.7rem;}
 #app>*, .weekDays {
     margin: 5px;
     padding: 15px;
-}
-
-.caseInactive {
-    background-color: gray;
-    
 }
 
 .caseActive {
@@ -60,80 +50,111 @@ body {
 }
 
 #app, .weekDays {
-    width: 55%;
     margin: auto;
 }
 .weekDays { 
-    grid-auto-rows: 25px;
+    display: flex;
+    justify-content: space-between;
     text-align: center!important;
 }
 .weekDays div{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Merriweather';
+    font-family: 'Times New Roman';
     text-transform: uppercase;
     color: var(--colorA);
 }
 
 #appMonth, #appYear{
-    width: 55%;
     margin: auto;
     text-align: center;
 }
 #appYear {   
-    font-family: 'Merriweather';
+    font-family: 'Times New Roman';
     text-transform: uppercase;
     color: var(--colorA) ;
 }
-.month {
-    font-family: 'Merriweather';
+.month, #eventTitre {
+    font-family: 'Times New Roman';
     font-size: 2rem;
-    text-align: center;
+    text-align: left;
     font-weight: bold;
     color: var(--colorC);
     text-shadow: 1px 0px 1px var(--colorA);
     box-shadow: inset 0px -15px 0px var(--colorD);
 }
-
-
-.change {
-    margin: auto;
-    width: 55%;
+.btnApp {
     display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin: auto;
+    width: 100%;
+}
+
+.btnApp #eventAdd {
+  padding: 5px;
+  padding-left: 20px; 
+  padding-right: 20px; 
+  font-family: 'Times New Roman';
+  border-radius: 5px;
+  border: 0px;
+  background-color: var(--colorA);
+  border: rgb(150, 129, 150);
+  color: var(--colorB);
+  cursor: pointer;
+  margin-top: 5px;
+}
+.btnApp #eventAdd:hover {
+    background-color: var(--colorB);
+    color: var(--colorA);
+}
+.navigate {
+    margin: 4px;
+    margin-top: 10px;
+    display: flex;
+    width: 200px;
     justify-content: space-between;
     align-items: center;
 }
 
-.change ul {
-    padding: 0px;
-    list-style: none;
-    justify-content: center;
-    gap: 20px;
-}
-
-.change ul li {
-    cursor: pointer;
-    display: inline-block;
-    margin-left: 5px; margin-right: 5px;
-    font-weight: normal;
-}
-
-.change button {
+.navigate button {
   padding: 5px;
   padding-left: 20px; 
   padding-right: 20px; 
-  font-family: 'Merriweather';
+  font-family: 'Times New Roman';
   border-radius: 5px;
   border: 0px;
   background-color: var(--colorB);
-  border: rgb(150, 129, 150);
+  border: rgb(0, 0, 0);
   color: var(--colorA);
   transition: ease-in 0.4ms;
   cursor: pointer;
 }
 
-.change button:hover {
+.navigate button:hover {
     color: var(--colorD);
     background-color: var(--colorA);
+}
+
+div#event.event:nth-child(odd) {
+    background-color: var(--colorC);
+    color: var(--colorText);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 2px;
+}
+div#event.event:nth-child(even) {
+    background-color: var(--colorD);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 2px;
+}
+
+.entete1 {
+    text-align: center!important;
+}
+
+.caseInactive {
+    background-color: gray;
 }
